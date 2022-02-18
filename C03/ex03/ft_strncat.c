@@ -31,3 +31,35 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	dest[a] = '\0';
 	return (dest);
 }
+
+
+#include <stdio.h>
+
+int main()
+{
+	char src[] = "Pindamonhangaba";
+	char dest[] = "Fabio ";
+	
+	ft_strncat(dest, src, 14);
+	printf("Concatenado = %s\n", dest);
+	return (0);
+}
+
+
+void ex03()
+{
+    char str[] = "abcd";
+    char to_find[] = "efgh";
+    int n = 1;
+    
+    printf("Resposta esperaba: sbfsbas\nSua função retornou: %s\n\n", ft_strncat(str, to_find, n));
+    
+}
+
+
+int main(void)
+{
+    printf("\n\n---EX03---\n\n");
+    ex03();
+    return (0);
+}

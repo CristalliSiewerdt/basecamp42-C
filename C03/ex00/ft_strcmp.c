@@ -26,3 +26,17 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
+
+#include <stdio.h>
+
+int main(void)
+{
+	char str1[4] = "abc";
+	char str2[12] = "abD";
+	int retorno;
+
+	retorno = ft_strcmp(str1, str2);
+	printf("Retorno = %d\n", retorno);
+	
+	return (0);
+}
