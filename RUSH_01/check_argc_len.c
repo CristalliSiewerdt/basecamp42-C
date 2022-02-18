@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   check_argc_len.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcristal <tcristal@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: jbillet <jbillet@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 20:49:52 by tcristal          #+#    #+#             */
-/*   Updated: 2022/02/15 00:15:39 by tcristal         ###   ########.fr       */
+/*   Created: 2022/02/13 23:25:45 by jbillet           #+#    #+#             */
+/*   Updated: 2022/02/13 23:43:40 by jbillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
+#include <unistd.h>
+
+int	check_argc_len(int argc)
 {
-	int	temp;
-
-	temp = *a;
-	*a = *a / *b;
-	*b = temp % *b;
-}
-
-#include <stdio.h>
-
-int main()
-{
-    int a = 39;
-    int b = 7;
-
-    ft_ultimate_div_mod(&a, &b);
-    printf("%d %d\n", a, b);
+	if (argc < 2 || argc > 2)
+	{
+		return (1);
+	}
+	else
+		return (0);
 }

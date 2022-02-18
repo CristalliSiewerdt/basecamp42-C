@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcristal <tcristal@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: oguirra- <oguirra-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 20:49:52 by tcristal          #+#    #+#             */
-/*   Updated: 2022/02/15 00:15:39 by tcristal         ###   ########.fr       */
+/*   Created: 2022/02/05 17:37:38 by oguirra-          #+#    #+#             */
+/*   Updated: 2022/02/05 18:44:49 by oguirra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
+#include <unistd.h>
+
+void	ft_putchar(char c)
 {
-	int	temp;
-
-	temp = *a;
-	*a = *a / *b;
-	*b = temp % *b;
-}
-
-#include <stdio.h>
-
-int main()
-{
-    int a = 39;
-    int b = 7;
-
-    ft_ultimate_div_mod(&a, &b);
-    printf("%d %d\n", a, b);
+	write(1, &c, 1);
 }

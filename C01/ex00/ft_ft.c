@@ -14,3 +14,13 @@ void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
+#include <stdio.h>
+
+int	main()
+{
+	int i;
+		
+	ft_ft(&i);
+	printf("valor é: %d", i);
+	
+}

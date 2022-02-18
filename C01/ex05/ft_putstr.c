@@ -20,3 +20,12 @@ void	ft_putstr(char *str)
 		str++;
 	}
 }
+
+
+int main()
+{
+    char caracter[9] = "athletico";
+    ft_putstr(caracter);
+	write(1, "\n", 1);
+
+}

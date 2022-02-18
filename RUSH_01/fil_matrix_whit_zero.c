@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   fill_matrix_with_zero.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcristal <tcristal@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: jbillet <jbillet@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 20:49:52 by tcristal          #+#    #+#             */
-/*   Updated: 2022/02/15 00:15:39 by tcristal         ###   ########.fr       */
+/*   Created: 2022/02/13 23:13:02 by jbillet           #+#    #+#             */
+/*   Updated: 2022/02/14 01:52:30 by jbillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
+void	fill_matrix_with_zero(int g_matrix_size, int **matrix)
 {
-	int	temp;
+	int	i;
+	int	j;
 
-	temp = *a;
-	*a = *a / *b;
-	*b = temp % *b;
-}
-
-#include <stdio.h>
-
-int main()
-{
-    int a = 39;
-    int b = 7;
-
-    ft_ultimate_div_mod(&a, &b);
-    printf("%d %d\n", a, b);
+	i = 0;
+	j = 0;
+	while (i < g_matrix_size)
+	{
+		while (j < g_matrix_size)
+		{
+			{
+				matrix[i][j] = 0;
+				j++;
+			}
+		}
+		j = 0;
+		i++;
+	}
 }
