@@ -41,3 +41,9 @@ void	ft_print_comb(void)
 		numbers[2] = numbers[1] + 1;
 	}
 }
+
+
+int main()
+{
+	ft_print_comb();
+}
